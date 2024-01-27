@@ -6,7 +6,6 @@
 }
 
 /* ----- ----- ----- Login Page ----- ----- -----*/
-
 #body {
     display: flex;
     justify-content: center;
@@ -99,7 +98,6 @@ h1 {
 }
 
 /* ----- ----- ----- Register Page ----- ----- ----- */
-
 .register {
     width: 420px;
     background: white;
@@ -143,8 +141,7 @@ h1 {
     margin-top: 20px;
 }
 
-/* ----- ----- ----- Home Page ----- ----- ----- */
-
+/* ----- ----- ----- Header ----- ----- ----- */
 header {
     position: fixed;
     width: 100%;
@@ -215,3 +212,5 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%;
 }
+
+/* ----- ----- ----- Home ----- ----- ----- */
