@@ -5,9 +5,6 @@ function login() {
     var user = users.find(u => u.email == email && u.password == password);
     if (user) 
     {
-        // var intent = new Intent(this, MainActivity.class);
-        // startActivity(intent);
-        // finish();
         return "submit";
     } 
     else 
