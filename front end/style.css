@@ -2,56 +2,150 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-body {
+/* ----- ----- ----- Login Page ----- ----- -----*/
+
+.login-body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: green;
+    background: whitesmoke;
 }
 
-.wrapper {
+.login {
     width: 420px;
-    background: gray;
-    color: white;
+    background: white;
+    border: 2px solid black;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px black;
+    color: black;
+    border-radius: 10px;
+    padding: 30px 40px;
 }
 
-.wrapper h1 {
+.login h1 {
     font-size: 36px;
     text-align: center;
 }
 
-.wrapper .input-box {
+.login .login-input-box {
     position: relative;
     width: 100%;
     height: 50px;
     margin: 30px 0;
 }
 
-.input-box input {
+.login-input-box input {
     width: 100%;
     height: 100%;
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 40px;
     font-size: 16px;
-    color: white;
+    color: black;
     padding: 20px 45px 20px 20px;
 }
 
-.input-box input::placeholder {
-    color: white;
+.login-input-box input::placeholder {
+    color: black;
 }
 
-.input-box i {
+.login-input-box i {
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
+}
+
+.login .btn {
+    width: 100%;
+    height: 45px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 5px black;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+}
+
+.login .btn:hover {
+    box-shadow: 0 0 10px black;
+    transition: 0.2s;
+}
+
+.login .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link p a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline ;
+}
+
+/* ----- ----- ----- Home Page ----- ----- ----- */
+
+.home-body {
+    margin: 0;
+    background: white;
+    font-weight: 300;
+}
+
+.home-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px;
+}
+
+nav ul li a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }
