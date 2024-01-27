@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UCIHack App Login</title>
+    <title>UCI Connected Login</title>
     <link rel="stylesheet" href="style.css">
     <link href="../backend/users.js"
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="irvinehacks2024/backend/users.js"></script>
 </head>
 
-<body class="login-body">
+
+<body class="body">
     <div class="login">
         <form action="home.html">
             <h1>Login</h1>
@@ -26,14 +27,29 @@
                 <i class='bx bxs-lock-alt'></i>
             </div>
 
-            <button onclick="" type="" class="btn">Login</button>
+            <button onclick="checkLogin()" type="button" class="btn">Login</button>
 
-            <div class="register-link">
+            <div class="link">
                 <p>Don't have an account? <a href="register.html">Register</a></p>
             </div>
 
         </form>
     </div>
+
+    <script>
+        import data from "backend/userData.json"
+        function checkLogin() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            var user = users.find(u => u.email == email && u.password == password);
+            if (user) {
+                window.location.href = "home.html";
+            } else {
+                alert("Invalid email or password. Please try again.");
+            }
+        }
+    </script>
 </body>
 
 </html>
