@@ -1,0 +1,26 @@
+{
+    "users": [
+        {
+            "email": "ryan@uci.edu",
+            "password": "ryaniscool",
+            "name": "Ryan",
+            "age": 19,
+            "gender": "Male",
+            "orientation": "Straight",
+            "major": "Computer Science",
+            "bio": "I like muscular guys and gaming",
+            "pfp": "image"
+        },
+        {
+            "email": "tae@uci.edu",
+            "password": "silentsniper",
+            "name": "Tae",
+            "age": 18,
+            "gender": "Male",
+            "orientation": "Straight",
+            "major": "Biology",
+            "bio": "Call me tall cause I'm 6'2\"",
+            "pfp": "image"
+        }
+    ]
+}
