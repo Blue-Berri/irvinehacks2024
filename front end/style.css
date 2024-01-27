@@ -224,6 +224,7 @@ nav ul li a:hover::after {
   
 .left, .right {
     padding: 15px;
+    padding-top: 400px;
     width: 10%;
 }
   
@@ -248,6 +249,11 @@ nav ul li a:hover::after {
     border-radius: 50%;
 }
 
+.choice-btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
 /* ----- ----- ----- Matches ----- ----- ----- */
 .matches {
     padding-top: 100px;
