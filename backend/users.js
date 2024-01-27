@@ -7,6 +7,7 @@ var users = [
         gender: "Male",
         orientation: "Straight",
         major: "Computer Science",
+        bio: "I like muscular guys and gaming",
         pfp: image
     },
     {
@@ -17,6 +18,7 @@ var users = [
         gender: "Male",
         orientation: "Straight",
         major: "Biology",
+        bio: "Call me tall cause I'm 6'2\"",
         pfp: image
     }
 ]
