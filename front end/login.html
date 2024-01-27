@@ -42,7 +42,7 @@
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
 
-            var user = users.find(u => u.email == email && u.password == password);
+            var user = data.find(u => u.email == email && u.password == password);
             if (user) {
                 window.location.href = "home.html";
             } else {
