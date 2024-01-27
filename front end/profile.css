@@ -77,6 +77,10 @@
     margin-left: 2rem;
 }
 
+.profile-edit-btn:hover {
+    box-shadow: 0 0 10px black;
+}
+
 .profile-settings-btn {
     font-size: 2rem;
     margin-left: 1rem;
@@ -119,7 +123,7 @@ div.image {
 }
   
 div.image:hover {
-    border: 1px solid #777;
+    box-shadow: 0 0 10px black;
 }
   
 div.image img {

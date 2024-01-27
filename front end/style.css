@@ -244,12 +244,28 @@ nav ul li a:hover::after {
 }
 
 .profile-image img {
-    height: 175px;
-    border: 2px black;
+    border: 3px solid black;
+    height: 250px;
     border-radius: 50%;
 }
 
+.user-name {
+    display: flex;
+    padding: 0px 30px 10px;
+}
+
+.user-major {
+    display: flex;
+    padding: 0px 30px 10px;
+}
+
+.bio {
+    display: flex;
+    padding: 0px 30px 10px;
+}
+
 .choice-btn {
+    position: fixed;
     height: 50px;
     width: 50px;
     border-radius: 50%;
