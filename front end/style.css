@@ -145,3 +145,73 @@ h1 {
 
 /* ----- ----- ----- Home Page ----- ----- ----- */
 
+header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 5%;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+
+#home {
+    float: left;
+    margin: 10px 15px;
+}
+
+#home a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+#home a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+#home a:hover::after {
+    width: 100%;
+}
+
+#nav {
+    float: right;
+}
+#nav ul {
+    text-align: center;
+    list-style: none;
+}
+
+#nav ul li {
+    display: inline-block;
+    margin: 10px 15px;
+}
+
+nav ul li a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
