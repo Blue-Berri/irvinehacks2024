@@ -214,21 +214,21 @@ nav ul li a:hover::after {
 }
 
 /* ----- ----- ----- Home ----- ----- ----- */
-
 #profiles {
     padding-top: 100px;
 }
 
 .column {
     float: left;
-    padding: 10px;
 }
   
 .left, .right {
+    padding: 15px;
     width: 10%;
 }
   
 .middle {
+    padding: 15px;
     width: 80%;
 }
 
@@ -236,4 +236,19 @@ nav ul li a:hover::after {
     content: "";
     display: table;
     clear: both;
+}
+
+.profile-image {
+    float: left;
+}
+
+.profile-image img {
+    height: 175px;
+    border: 2px black;
+    border-radius: 50%;
+}
+
+/* ----- ----- ----- Matches ----- ----- ----- */
+.matches {
+    padding-top: 100px;
 }
