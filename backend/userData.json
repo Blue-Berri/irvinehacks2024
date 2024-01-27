@@ -21,6 +21,17 @@
             "major": "Biology",
             "bio": "Call me tall cause I'm 6'2\"",
             "pfp": "image"
+        },
+        {
+            "email": "",
+            "password": "",
+            "name": "Ahri",
+            "age": 19,
+            "gender": "Female",
+            "orientation": "Straight",
+            "major": "Computer Science",
+            "bio": "I sell feet pics online",
+            "pfp": "image"
         }
     ]
 }
