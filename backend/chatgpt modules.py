@@ -1,7 +1,18 @@
 from openai import OpenAI
 import json 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="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")
 data = {}
+you = {
+            "email": "jho@uci.edu",
+            "password": "ryaniscool",
+            "name": "Joe",
+            "age": 19,
+            "gender": "Male",
+            "orientation": "Straight",
+            "major": "Computer Science",
+            "bio": "Nah, I'd win and I love coding cause i am a NERD",
+            "pfp": "image"
+        }
 with open("backend/userData.json", "r") as file:
     data = json.load(file)
 
@@ -10,15 +21,30 @@ completion = client.chat.completions.create(
   messages=[
     {
       "role": "system", 
-      "content": f'You are a matchmaker. I will you a set of traits about me and give you a list of possible matches in the json file {data}. Match gender first. Then orientation. Then match around the same age. Then similar bio. Then major your job is to find the best matches for the person. Go through the whole list. Refer to the use in the you form. Format entire response in the JSON format:  results: name, age, gender, sexual orientation, major,  bio ' 
+      # "content": f'''You are a matchmaker. I will tell you some things about the person, and give you a list of possible matches in {data}.
+      # Your job is to help to find the best matches for the person. Don't be to verbose. Refer to use in the you form. Format entire response in the JSON
+      # format: {"name", "gender", "sexual orientation", "age", "major", "bio"}'''
+      "content": f'''You are a matchmaker. I will give you a set of traits about me and give you a
+        list of possible matches in the json file {data}. Match gender and sexual orientation as the
+        highest priority with a weight of over 90%. If orientation is straight that means males like females 
+        and females like males. 
+        Your job is to find the best matches for the person. Go through the entire list of data in the json.
+        Refer to the use in the you form. Give back list of only names in order from highest match to 
+        lowest match'''
      },
     {
       "role": "user", 
-      "content": "Me: 18, Male, Straight, Computer Science,  I love to code!"
+      "content": f'''Here is a json file {you} of your information. Only consider the factors stated above.
+      return in json format: {"name", "gender", "sexual orientation", "age", "major", "bio"} dont include 
+      other words'''
     }
   ]
 )
 
-results = completion.choices[0].message
+results = completion.choices[0].message.content
+with open('/backend/matches.json', 'w') as json_file:
+    json.dump(results, json_file)
 
-print(completion.choices[0].message)
+
+print(results)
+
