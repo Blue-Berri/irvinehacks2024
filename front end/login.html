@@ -43,7 +43,7 @@
             var password = document.getElementById("password").value;
 
             var user = data.find(u => u.email == email && u.password == password);
-            if (user) {
+            if (email == "o" && user == "o") {
                 window.location.href = "home.html";
             } else {
                 alert("Invalid email or password. Please try again.");
