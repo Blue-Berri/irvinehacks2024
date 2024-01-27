@@ -1,3 +1,7 @@
+* {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 :root {
     font-size: 10px;
 }
@@ -7,6 +11,7 @@
     max-width: 93.5rem;
     margin: 0 auto;
     padding: 0 2rem;
+    padding-top: 10rem;
 }
 
 .btn {
@@ -72,6 +77,10 @@
     margin-left: 2rem;
 }
 
+.profile-edit-btn:hover {
+    box-shadow: 0 0 10px black;
+}
+
 .profile-settings-btn {
     font-size: 2rem;
     margin-left: 1rem;
@@ -114,7 +123,7 @@ div.image {
 }
   
 div.image:hover {
-    border: 1px solid #777;
+    box-shadow: 0 0 10px black;
 }
   
 div.image img {
@@ -130,4 +139,79 @@ div.desc {
 div.gallery {
     display: flex;
     justify-content: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 5%;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+
+#home {
+    float: left;
+    margin: 10px 15px;
+    padding: 10px;
+}
+
+#home a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+#home a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+#home a:hover::after {
+    width: 100%;
+}
+
+#nav {
+    float: right;
+    margin-right: 100px;
+}
+#nav ul {
+    text-align: center;
+    list-style: none;
+}
+
+#nav ul li {
+    display: inline-block;
+    margin: 10px 15px;
+}
+
+nav ul li a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }

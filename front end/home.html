@@ -4,22 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UCIHack App Home</title>
+    <title>UCI Connected Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="home-body">
-    <header>
-        <div class="home-navbar">
-            <nav>
-                <ul class="links">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="messages.html">Messages</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                </ul>
-            </nav>
+<header>
+    <div id="home"><a href="home.html">Home</a></div>
+
+    <div id="nav">
+        <nav>
+            <ul>
+                <li><a href="matches.html">Matches</a></li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <div id="profiles">
+        <div class="rows">
+
+            <div class="column left">
+                <button class="choice-btn"><img src="" alt="Peter No"></button>
+            </div>
+    
+            <div class="column middle">
+                <div class="profile-image"><img src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg" alt=""></div>
+                <h1 class="user-name">Name, Age</h1>
+                <h4 class="user-major">Major</h4>
+                <p class="bio">bio</p>
+
+                <div class="gallery">
+
+                    <div class="image">
+                        <a target="_blank" href="https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png">
+                          <img src="https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png" alt="Cinque Terre" width="500" height="500">
+                        </a>
+                        <div class="desc">Add a description of the image here</div>
+                      </div>
+                      
+                      <div class="image">
+                        <a target="_blank" href="https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png">
+                          <img src="https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png" alt="Forest" width="500" height="500">
+                        </a>
+                        <div class="desc">Add a description of the image here</div>
+                      </div>
+                      
+                      <div class="image">
+                        <a target="_blank" href="https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png">
+                          <img src="https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png" alt="Northern Lights" width="500" height="500">
+                        </a>
+                        <div class="desc">Add a description of the image here</div>
+                      </div>
+                
+                </div>
+            </div>
+    
+            <div class="column right">
+                <button class="choice-btn"><img src="" alt="Peter Yes"></button>
+            </div>
+
         </div>
-    </header>
+    </div>
 </body>
 
 </html>
