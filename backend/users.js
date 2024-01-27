@@ -22,8 +22,8 @@ var users = [
 ]
 
 function login() {
-    var email = getString(R.string.email);
-    var password = getString(R.string.password);
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
     var user = users.find(u => u.email == email && u.password == password);
     if (user) 
     {
