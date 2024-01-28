@@ -267,8 +267,9 @@ nav ul li a:hover::after {
     border-radius: 50%;
 }
 
-.profile-image h1, h2, p {
-    float: left;
+.profile-text{
+    display: flex;
+    flex-direction: column;
 }
 
 .user-name {
