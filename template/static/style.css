@@ -332,7 +332,6 @@ nav ul li a:hover::after {
 }
 
 #profile-editor .left, #profile-editor .right {
-    border: 2px solid black;
     width: 50%;
     text-align: center;
     align-items: center;
@@ -341,7 +340,6 @@ nav ul li a:hover::after {
 }
 
 #profile-editor img {
-    border: 2px solid black;
     border-radius: 50%;
     width: 200px;
 }
