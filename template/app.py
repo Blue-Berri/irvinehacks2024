@@ -47,12 +47,13 @@ def register():
             # "pfp": request.form['Pfp']
         }
         print(data)
+
         try:
             with open("userData.json", 'r') as file:
                 existing_data = json.load(file)
         except FileNotFoundError:
             existing_data = []
-        existing_data.append(data)
+        existing_data["users"].append(data)
         with open('userData.json', 'w') as file:
             json.dump(existing_data, file)
     
