@@ -37,7 +37,7 @@
         function checkLogin() {
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
-
+// how to make post request with fetch to flask
             fetch("userData.json")
                 .then(response => response.json())
                 .then(data => {
