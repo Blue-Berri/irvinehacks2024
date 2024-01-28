@@ -2,13 +2,18 @@ from flask import Flask, redirect, url_for, render_template, request
 import json
 from pathlib import Path
 
-app = Flask(__name__, template_folder=Path(__file__).resolve().parent / 'front end')
+app = Flask(__name__, template_folder=Path(__file__).resolve().parent)
 
 @app.route("/")
 def home():
-    call db
-    databasedata
-    return render_template("../home.html, databasedata="data"")
+    # call db
+    # databasedata
+    return render_template("home.html")
+# , databasedata="data"
+
+@app.route("/matches")
+def matches():
+    return render_template("matches.html")
 
 @app.route("/register", methods=["POST"])
 def register():
@@ -35,7 +40,7 @@ def register():
     with open('userData.json', 'w') as file:
         json.dump(existing_data, file)
     
-    put data in db
+# put data in db
     return redirect(url_for('home'))
 
 # @app.route('/home')
