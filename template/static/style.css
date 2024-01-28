@@ -229,17 +229,17 @@ nav ul li a:hover::after {
     padding-top: 100px;
 }
 
-.column {
+#profiles .column {
     float: left;
 }
   
-.left, .right {
+#profiles .left,#profiles .right {
     padding: 15px;
     padding-top: 400px;
     width: 10%;
 }
   
-.middle {
+#profiles .middle {
     text-align: center;
     padding: 15px;
     width: 80%;
@@ -317,54 +317,97 @@ nav ul li a:hover::after {
 
 /* ----- ----- ----- Profile Edit ----- ----- ----- */
 #profile-editor {
+    height: 100%;
+    padding: 15% 5%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 90vh;
+    text-align: center; 
+}
+
+#profile-editor .column { 
+    float: left;
+}
+
+#profile-editor .left, #profile-editor .right {
+    width: 50%;
     text-align: center;
-    padding-top: 100px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 #profile-editor img {
-    width: 200px;
     border-radius: 50%;
-    margin: 10px 30px;
+    width: 200px;
+}
+
+#profile-editor .image-input {
+    display: none;
 }
 
 #profile-editor label {
+    display: flex;
+    padding-top: 15px;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-}
-
-.image-label {
-    display: block;
-    text-align: center;
-    width: 140px;
-    background-color: #ffdc92;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 15%;
-    cursor: pointer;
-}
-
-.image-input {
-    display: none;
 }
 
 #profile-editor input {
     text-align: center;
 }
 
-#bio {
-    height: 50px;
-    width: 400px;
+#profile-editor select {
+    width: 140px;
 }
 
-label {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px 10px 0px;
+#profile-editor option {
+    text-align: center;
+}
+
+.image-label {
+    display: block;
+    width: 140px;
+    background-color: #ffdc92;
+    box-shadow: 0 0 5px #ffdc92;
+    font-weight: 600;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15%;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-label:hover {
+    box-shadow: 0 0 10px black;
+    transition: 0.2s;
+}
+
+#bio {
+    height: 50px;
+    width: 200px;
+}
+
+#profile-editor .btn {
+    width: 25%;
+    height: 45px;
+    background-color: #ffdc92;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 5px #ffdc92;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+#profile-editor .btn:hover {
+    box-shadow: 0 0 10px black;
+    transition: 0.2s;
 }
 
 /* ----- ----- ----- Matches ----- ----- ----- */

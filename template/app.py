@@ -100,7 +100,7 @@ def profileeditor():
 
         return redirect(url_for('home'))
 
-    return render_template("register.html")
+    return render_template("profileeditor.html")
 
 
 
@@ -145,7 +145,7 @@ def register():
             file.write(users)
 
 
-        return redirect(url_for('home'))
+        return redirect(url_for('profileeditor'))
 
     return render_template("register.html")
 
