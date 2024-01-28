@@ -24,29 +24,89 @@
 
 <body>
     <div id="profile-editor">
-        <img src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg" id="profile-pic">
-        <label class="image-label" for="input-file">Update Image</label>
-        <input class="image-input" type="file" accept="image/png, image/jpg, image/jpeg" id="input-file">
-        
-        
-        <label for="name" id="label-name">Name</label>
-        <input type="text" id="name" placeholder="Name">
+        <form action="home.html">
 
-        <label for="age" id="label-age">Age</label>
-        <input type="text" id="age" placeholder="Age">
+            <div class="column left">
+                <img src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg" id="profile-pic">
+                <label class="image-label" for="input-file">Update Image</label>
+                <input class="image-input" type="file" accept="image/png, image/jpg, image/jpeg" id="input-file">
+                
+                <label for="name" id="label-name">Name</label>
+                <input type="text" id="name" placeholder="Name">
 
-        <label for="major" id="label-major">Major</label>
-        <input type="text" id="major" placeholder="Major">
+                <label for="age" id="label-age">Age</label>
+                <input type="text" id="age" placeholder="Age">
 
-        <label for="bio" id="label-bio">Bio</label>
-        <input type="text" id="bio" placeholder="Talk about yourself!">
+                <label for="major" id="label-major">Major</label>
+                <input type="text" id="major" placeholder="Major">
+
+                <label for="gender" id="label-gender">Gender</label>
+                <select name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="transgender">Transgender</option>
+                    <option value="nonbinary">Non-binary</option>
+                    <option value="gender-fluid">Gender Fluid</option>
+                    <option value="gender-noncomforming">Gender Nonconforming</option>
+                    <option value="gender-questioning">Gender Questioning</option>
+                </select>
+
+                <label for="orientation" id="label-orientation">Sexual Orientation</label>
+                <select name="orientation" id="orientation">
+                    <option value="straight">Straight</option>
+                    <option value="gay">Gay</option>
+                    <option value="lesbian">Lesbian</option>
+                    <option value="bisexual">Bisexual</option>
+                    <option value="asexual">Asexual</option>
+                    <option value="pansexual">Pansexual</option>
+                    <option value="demisexual">Demisexual</option>
+                    <option value="questioning">Questioning</option>
+                </select>
+
+                <label for="bio" id="label-bio">Bio</label>
+                <input type="text" id="bio" placeholder="Talk about yourself!">
+            </div>
+
+            <div class="column right">
+                <img src="https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png" id="pic-one">
+                <label class="image-label" for="input-file1">Update Image</label>
+                <input class="image-input" type="file" accept="image/png, image/jpg, image/jpeg" id="input-file1">
+
+                <img src="https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png" id="pic-two">
+                <label class="image-label" for="input-file2">Update Image</label>
+                <input class="image-input" type="file" accept="image/png, image/jpg, image/jpeg" id="input-file2">
+
+                <img src="https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png" id="pic-three">
+                <label class="image-label" for="input-file3">Update Image</label>
+                <input class="image-input" type="file" accept="image/png, image/jpg, image/jpeg" id="input-file3">
+                
+            </div>
+            
+            <button onclick="" type="button" class="btn">Save</button>
+        </form>
 
         <script>
             let profilePic = document.getElementById("profile-pic");
+            let picOne = document.getElementById("pic-one");
+            let picTwo = document.getElementById("pic-two");
+            let picThree = document.getElementById("pic-three");
+
             let inputFile = document.getElementById("input-file");
+            let inputFile1 = document.getElementById("input-file1");
+            let inputFile2 = document.getElementById("input-file2");
+            let inputFile3 = document.getElementById("input-file3");
 
             inputFile.onchange = function(){
                 profilePic.src = URL.createObjectURL(inputFile.files[0])
+            }
+            inputFile1.onchange = function(){
+                picOne.src = URL.createObjectURL(inputFile1.files[0])
+            }
+            inputFile2.onchange = function(){
+                picTwo.src = URL.createObjectURL(inputFile2.files[0])
+            }
+            inputFile3.onchange = function(){
+                picThree.src = URL.createObjectURL(inputFile3.files[0])
             }
         </script>
 
