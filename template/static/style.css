@@ -159,9 +159,11 @@ header {
 }
 
 #home {
-    background-color: #ffdc92;
     float: left;
-    margin: 10px 15px;
+}
+
+.logo{
+    width: 20%;
 }
 
 #home a {
@@ -319,12 +321,6 @@ nav ul li a:hover::after {
     width: 170px;
     height: auto;
     background-color: white;
-}
-  
-.desc {
-    padding: 10px 50px;
-    text-align: center;
-    background-color: #ffdc92;
 }
 
 .gallery {
