@@ -304,7 +304,7 @@ nav ul li a:hover::after {
     padding: 165px;
     display: flex;
     justify-content: center;
-    position: fixed
+    position: fixed;
 }
 
 /* ----- ----- ----- Profile Edit ----- ----- ----- */
