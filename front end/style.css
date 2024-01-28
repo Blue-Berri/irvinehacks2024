@@ -305,6 +305,44 @@ nav ul li a:hover::after {
     display: fixed;
     justify-content: center;
 }
+
+/* ----- ----- ----- Profile Edit ----- ----- ----- */
+#profile-editor {
+    padding-top: 100px;
+}
+
+#profile-editor img {
+    width: 200px;
+    border-radius: 50%;
+    margin: 10px 30px;
+}
+
+.image-label {
+    display: block;
+    text-align: center;
+    width: 140px;
+    background-color: #ffdc92;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15%;
+    cursor: pointer;
+}
+
+.image-input {
+    display: none;
+}
+
+label {
+    display: flex;
+    padding: 5px 10px 0px;
+}
+
+input {
+    display: flex;
+    margin: 5px 10px ;
+    padding: 5px;
+}
+
 /* ----- ----- ----- Matches ----- ----- ----- */
 .matches {
     padding-top: 100px;
