@@ -109,6 +109,25 @@ nav ul li a:hover::after {
 }
 
 
+.media-chat {
+    padding-right: 64px;
+    margin-bottom: 0;
+}
+
+.media {
+    padding: 16px 12px;
+    -webkit-transition: background-color .2s linear;
+    transition: background-color .2s linear;
+}
+
+.media-chat .media-body p {
+    position: relative;
+    padding: 6px 8px;
+    margin: 4px 0;
+    background-color: #f5f6f7;
+    border-radius: 3px;
+}
+
 .publisher {
     position: relative;
     display: -webkit-box;
