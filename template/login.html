@@ -7,7 +7,6 @@
     <title>UCI Connected Login</title>
     <link rel="stylesheet" href="./static/style.css">
     <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
-    <script src="users.js"></script>
 </head>
 
 <body class="container">
@@ -43,7 +42,9 @@
                 .then(response => response.json())
                 .then(data => {
                     var user = data.users.find(u => u.email === email && u.password === password);
-                    if (user) {
+                    if (password.length == 0 || password.length == 0){
+                        alert("Blank field detected")
+                    } else if (user) {
                         window.location.href = "home.html";
                     } else {
                         alert("Invalid email or password. Please try again.");
