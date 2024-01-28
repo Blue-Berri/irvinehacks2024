@@ -159,9 +159,11 @@ header {
 }
 
 #home {
-    background-color: #ffdc92;
     float: left;
-    margin: 10px 15px;
+}
+
+#home .logo{
+    width: 20%;
 }
 
 #home a {
