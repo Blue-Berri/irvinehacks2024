@@ -8,6 +8,8 @@ app = Flask(__name__, template_folder=Path(__file__).resolve().parent)
 
 @app.route("/home", methods=["POST", "GET"])
 def home():
+    logo = "template/Connected(2).png"
+
     with open("template/matches.json", 'r') as file:
         data = json.loads(file.read())
         users = data.get("users")
@@ -37,7 +39,7 @@ def home():
                 json.dump({"users": users},file)
         
         
-    return render_template("home.html", name=name, age=age, bio=bio, major=major, pfp=pfp, pic1=pic1, pic2=pic2, pic3=pic3)
+    return render_template("home.html", name=name, age=age, bio=bio, major=major, pfp=pfp, pic1=pic1, pic2=pic2, pic3=pic3, logo=logo)
 
 @app.route("/matches")
 def matches():
