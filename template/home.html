@@ -70,14 +70,14 @@
             </div>
     
             <div class="column right">
-                <button id="choice-btn-yes"></button>
-                <script>
+                <form action="/home" method="post"><button id="choice-btn-yes" type="submit"></button></form>
+                <!-- <script>
                     document.getElementById("choice-btn-yes").addEventListener("click", function() {
                         fetch("/home", {method: "POST",
                         body: {method: "remove_first"}})
                         .then((res) => res.json())
 });
-                </script>
+                </script> -->
             </div>
 
         </div>

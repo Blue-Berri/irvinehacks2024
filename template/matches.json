@@ -1,17 +1,1 @@
-{
-    "users": [
-        {
-            "email": "tae@awesome.cool",
-            "password": "silentsniper",
-            "name": "Tae",
-            "age": 18,
-            "gender": "Male",
-            "orientation": "Straight",
-            "major": "Biology",
-            "bio": "Call me tall cause I'm 6'2",
-            "pfp": "image"
-        },
-        {"email": "emily@gmail.com", "password": "emily123", "name": "Emily", "age": 22, "gender": "Female", "orientation": "Bisexual", "major": "Psychology", "bio": "Passionate about understanding the human mind. Enjoys painting and exploring new places.", "pfp": "image_emily.jpg"},
-        {"email": "alex@xyz.com", "password": "xyz1234", "name": "Alex", "age": 22, "gender": "Non-binary", "orientation": "Pansexual", "major": "Environmental Science", "bio": "Advocate for sustainable living. Loves hiking, reading, and fostering animals.", "pfp": "image_alex.png"}
-    ]
-}
+{"users": [{"email": "alex@xyz.com", "password": "xyz1234", "name": "Alex", "age": 22, "gender": "Non-binary", "orientation": "Pansexual", "major": "Environmental Science", "bio": "Advocate for sustainable living. Loves hiking, reading, and fostering animals.", "pfp": "image_alex.png"}]}
