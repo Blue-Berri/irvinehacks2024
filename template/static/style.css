@@ -9,6 +9,12 @@ body {
     background-color: #fff0cf;
 }
 
+h1 {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
 /* ----- ----- ----- Login Page ----- ----- -----*/
 .container {
     display: flex;
@@ -27,12 +33,6 @@ body {
     color: black;
     border-radius: 10px;
     padding: 30px 40px;
-}
-
-h1 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 20px;
 }
 
 .login .input-box {
@@ -155,6 +155,7 @@ header {
     padding: 20px 5%;
     justify-content: space-between;
     background-color: #ffdc92;
+    border: 3px solid #000000;
 }
 
 #home {
@@ -239,6 +240,7 @@ nav ul li a:hover::after {
 }
   
 .middle {
+    text-align: center;
     padding: 15px;
     width: 80%;
 }
@@ -286,32 +288,41 @@ nav ul li a:hover::after {
 }
 
 .image {
-    display: fixed;
-    margin: 5px;
-    border: 1px solid black;
-    float: left;
-    width: 200px;
+    margin: 0 10px;
+    border: 2px solid #000000;
+    padding: 10px;
+    width: 270px;
+    background-color: #ffdc92;
+    border-radius: 2%;
 }
   
 .image img {
-    width: 190px;
+    width: 240px;
     height: auto;
+    background-color: white;
 }
   
 .desc {
-    padding: 15px;
+    padding: 10px 50px;
     text-align: center;
+    background-color: #ffdc92;
 }
 
 .gallery {
-    padding: 165px;
-    display: flex;
+    padding: 200px 80px;
+    display: inline-flex;
     justify-content: center;
-    position: fixed;
+    align-items: center;
 }
 
 /* ----- ----- ----- Profile Edit ----- ----- ----- */
 #profile-editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    text-align: center;
     padding-top: 100px;
 }
 
@@ -319,6 +330,10 @@ nav ul li a:hover::after {
     width: 200px;
     border-radius: 50%;
     margin: 10px 30px;
+}
+
+#profile-editor label {
+    justify-content: center;
 }
 
 .image-label {
@@ -336,15 +351,20 @@ nav ul li a:hover::after {
     display: none;
 }
 
-label {
-    display: flex;
-    padding: 5px 10px 0px;
+#profile-editor input {
+    text-align: center;
 }
 
-#profile-editor input {
+#bio {
+    height: 50px;
+    width: 400px;
+}
+
+label {
     display: flex;
-    margin: 5px 10px ;
-    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px 0px;
 }
 
 /* ----- ----- ----- Matches ----- ----- ----- */
