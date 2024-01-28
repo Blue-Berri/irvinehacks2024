@@ -73,7 +73,14 @@
             </div>
     
             <div class="column right">
-                <button class="choice-btn-yes"></button>
+                <button id="choice-btn-yes"></button>
+                <script>
+                    document.getElementById("choice-btn-yes").addEventListener("click", function() {
+                        fetch("/home", {method: "POST",
+                        body: {method: "remove_first"}})
+                        .then((res) => res.json())
+});
+                </script>
             </div>
 
         </div>
