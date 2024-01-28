@@ -100,7 +100,6 @@ def messages():
 @app.route("/profileeditor", methods=["POST", "GET"])
 def profileeditor():
     if request.method == "POST":
-        # import pdb; pdb.set_trace()
         data = {
             "name": request.form['nameInput'],
             "age": request.form['ageInput'],
@@ -128,14 +127,14 @@ def profileeditor():
 
                 ]
             }
-        existing_data["users"].append(data)
-        existing_data["current"] = data
+        existing_data["users"][existing_data["current"]["email"]].update(data)
+        existing_data["current"].update(data)
         with open('template/userData.json', 'w') as file:
             users = json.dumps(existing_data)
             file.write(users)
 
 
-        return redirect(url_for('home'))
+        return redirect(url_for('profile'))
 
     return render_template("profileeditor.html")
 
