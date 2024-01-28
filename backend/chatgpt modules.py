@@ -2,17 +2,7 @@ from openai import OpenAI
 import json 
 client = OpenAI(api_key="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")
 data = {}
-you = {
-            "email": "jho@uci.edu",
-            "password": "ryaniscool",
-            "name": "Joe",
-            "age": 19,
-            "gender": "Male",
-            "orientation": "Straight",
-            "major": "Computer Science",
-            "bio": "Nah, I'd win and I love coding cause i am a NERD",
-            "pfp": "image"
-        }
+you = {}
 with open("backend/userData.json", "r") as file:
     data = json.load(file)
 
