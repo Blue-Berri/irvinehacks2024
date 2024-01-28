@@ -29,26 +29,26 @@
 
       <div class="profile-image">
 
-        <img src="https://upload.wikimedia.org/wikipedia/en/0/0e/University_of_California%2C_Irvine_seal.svg" alt="">
+        <img src="{{ pfp }}" alt="">
 
       </div>
 
       <div class="profile-user-settings">
 
-        <h1 class="profile-user-name">Joe Mama, Age</h1>
+        <h1 class="profile-user-name">{{ name }}, {{ age }}</h1>
 
-        <a href="profileeditor.html"><button class="btn profile-edit-btn">Edit Profile</button></a>
+        <a href="/profileeditor"><button class="btn profile-edit-btn">Edit Profile</button></a>
 
         <button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog" aria-hidden="true"></i></button>
 
       </div>
 
       <div class="profile-major">
-        <h3>Ligma</h3>
+        <h3>{{ major }}</h3>
       </div>
 
       <div class="profile-bio">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit 📷✈️🏕️</p>
+        <p>{{ bio }} 📷✈️🏕️</p>
       </div>
 
     </div>
@@ -58,9 +58,7 @@
   <div class="gallery">
 
         <div class="image">
-          <a target="_blank" href="https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png">
-            <img src="https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png" alt="Cinque Terre" width="500" height="500">
-          </a>
+            <img src="{{ pic1 }}" alt="Cinque Terre" width="500" height="500">
           <div class="desc">Add a description of the image here</div>
         </div>
         
