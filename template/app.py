@@ -6,29 +6,38 @@ app = Flask(__name__, template_folder=Path(__file__).resolve().parent)
 
 
 
-@app.route("/home")
+@app.route("/home", methods=["POST", "GET"])
 def home():
-    data = json.loads(open("template/userData.json", 'r').read())
-    name = data.get("current").get("name")
-    age = data.get("current").get("age")
-    bio = data.get("current").get("bio")
-    major = data.get("current").get("major")
-    pfp = data.get("current").get("pfp")
-    if data.get("current").get("pic1") == None:
-        pic1 = "https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png"
-    else:
-        pic1 = data.get("current").get("pic1")
-    if data.get("current").get("pic2") == None:
-        pic2 = "https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png"
-    else:
-        pic2 = data.get("current").get("pic2")
-    if data.get("current").get("pic3") == None:
-        pic3 = "https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png"
-    else:
-        pic3 = data.get("current").get("pic3")
-    
+    with open("template/matches.json", 'r') as file:
+        data = json.loads(file.read())
+        users = data.get("users")
+        if request.method == "POST":
+            users.pop(0)
+
+        name = data.get("users")[0].get("name")
+        age = data.get("users")[0].get("age")
+        bio = data.get("users")[0].get("bio")
+        major = data.get("users")[0].get("major")
+        pfp = data.get("users")[0].get("pfp")
+        if data.get("users")[0].get("pic1") == None:
+            pic1 = "https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png"
+        else:
+            pic1 = data.get("users")[0].get("pic1")
+        if data.get("users")[0].get("pic2") == None:
+            pic2 = "https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png"
+        else:
+            pic2 = data.get("users")[0].get("pic2")
+        if data.get("users")[0].get("pic3") == None:
+            pic3 = "https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png"
+        else:
+            pic3 = data.get("users")[0].get("pic3")
+
+        if request.method == "POST":
+            with open("template/matches.json", 'w') as file:
+                json.dump({"users": users},file)
+        
+        
     return render_template("home.html", name=name, age=age, bio=bio, major=major, pfp=pfp, pic1=pic1, pic2=pic2, pic3=pic3)
-# , databasedata="data"
 
 @app.route("/matches")
 def matches():

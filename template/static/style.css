@@ -289,14 +289,14 @@ nav ul li a:hover::after {
     padding: 0px 30px 10px;
 }
 
-.choice-btn-yes, .choice-btn-no {
+#choice-btn-yes, .choice-btn-no {
     position: fixed;
     height: 50px;
     width: 50px;
     border-radius: 50%;
 }
 
-.choice-btn-yes:hover, .choice-btn-no:hover {
+#choice-btn-yes:hover, .choice-btn-no:hover {
     cursor: pointer;
 }
 
