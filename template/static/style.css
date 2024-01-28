@@ -411,6 +411,20 @@ nav ul li a:hover::after {
 }
 
 /* ----- ----- ----- Matches ----- ----- ----- */
-.matches {
-    padding-top: 100px;
+#matches {
+    height: 100%;
+    padding-top: 10%;
+}
+#matches .match-column {
+    display: flex;
+    padding: 5%;
+}
+#matches .pfp {
+    float: left;
+    width: 10%;
+    border-radius: 50%;
+}
+#matches .name {
+    float: left;
+    padding-left: 5%;
 }
