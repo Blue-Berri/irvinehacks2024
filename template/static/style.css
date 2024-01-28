@@ -309,6 +309,12 @@ nav ul li a:hover::after {
 
 /* ----- ----- ----- Profile Edit ----- ----- ----- */
 #profile-editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    text-align: center;
     padding-top: 100px;
 }
 
@@ -316,6 +322,10 @@ nav ul li a:hover::after {
     width: 200px;
     border-radius: 50%;
     margin: 10px 30px;
+}
+
+#profile-editor label {
+    justify-content: center;
 }
 
 .image-label {
@@ -333,15 +343,20 @@ nav ul li a:hover::after {
     display: none;
 }
 
-label {
-    display: flex;
-    padding: 5px 10px 0px;
+#profile-editor input {
+    text-align: center;
 }
 
-#profile-editor input {
+#bio {
+    height: 50px;
+    width: 400px;
+}
+
+label {
     display: flex;
-    margin: 5px 10px ;
-    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px 0px;
 }
 
 /* ----- ----- ----- Matches ----- ----- ----- */
