@@ -34,6 +34,10 @@ header {
     margin: 10px 15px;
 }
 
+.logo{
+    width: 20%;
+}
+
 #home a {
     font-size: 20px;
     color: black;
