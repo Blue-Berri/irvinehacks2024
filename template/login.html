@@ -7,8 +7,8 @@
     <title>UCI Connected Login</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
-    <link href="../backend/users.js">
-    <script src="../backend/users.js"></script>
+    <link href="users.js">
+    <script src="users.js"></script>
 </head>
 
 <body class="container">
@@ -39,7 +39,7 @@
         function checkLogin() {
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
-            fetch("../backend/userData.json")
+            fetch("userData.json")
                 .then(response => response.json())
                 .then(data => {
                     var user = data.users.find(u => u.email === email && u.password === password);
