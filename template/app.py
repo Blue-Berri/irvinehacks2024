@@ -5,11 +5,16 @@ from pathlib import Path
 app = Flask(__name__, template_folder=Path(__file__).resolve().parent)
 
 
+
 @app.route("/home")
 def home():
-    # call db
-    # databasedata
-    return render_template("home.html")
+    data = json.loads(open("template/userData.json", 'r').read())
+    name = data.get("current").get("name")
+    age = data.get("current").get("age")
+    bio = data.get("current").get("bio")
+    major = data.get("current").get("major")
+    pfp = data.get("current").get("pfp")
+    return render_template("home.html", name=name, age=age, bio=bio, major=major, pfp=pfp )
 # , databasedata="data"
 
 @app.route("/matches")
