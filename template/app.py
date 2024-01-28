@@ -31,13 +31,13 @@ def messages():
 def profileeditor():
     return render_template("profileeditor.html")
 
-@app.route("/register", methods=["POST"])
+@app.route("/register", methods=["POST", "GET"])
 def register():
-    print("Hi")
     if request.method == "POST":
+        # import pdb; pdb.set_trace()
         data = {
-            "email": request.form['Email'],
-            "password": request.form['Password']
+            "email": request.form['emailInput'],
+            "password": request.form['passwordInput']
             # "name": request.form['Name'],
             # "age": request.form['Age'],
             # "gender": request.form['Gender'],
@@ -46,23 +46,28 @@ def register():
             # "bio": request.form['Bio'],
             # "pfp": request.form['Pfp']
         }
-        print(data)
 
         try:
-            with open("userData.json", 'r') as file:
-                existing_data = json.load(file)
-        except FileNotFoundError:
-            existing_data = []
+            with open("template/userData.json", 'r') as file:
+                existing_data = json.loads(file.read())
+                
+        except (FileNotFoundError, json.decoder.JSONDecodeError):
+            existing_data = {
+                "users": [
+
+                ]
+            }
         existing_data["users"].append(data)
-        with open('userData.json', 'w') as file:
-            json.dump(existing_data, file)
+        with open('template/userData.json', 'w') as file:
+            users = json.dumps(existing_data)
+            file.write(users)
+        return redirect(url_for('home'))
     
 # put data in db
-    return redirect(url_for('home'))
-
+    return render_template("register.html")
 # @app.route('/home')
 # def home():
 #     return render_template('home.html')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5501)

@@ -11,20 +11,20 @@
 
 <body class="container">
     <div class="register">
-        <form action="profileeditor.html">
+        <form action="register" method="post">
             <h1>Register</h1>
 
             <div class="input-box"> 
-                <input id="emailInput" type="text" placeholder="Email" required>
+                <input id="emailInput" name="emailInput" type="text" placeholder="Email" required>
                 <i class='bx bxs-user'></i>
             </div>
 
             <div class="input-box">
-                <input id="passwordInput" type="password" placeholder="Password" required>
+                <input id="passwordInput" name="passwordInput" type="password" placeholder="Password" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
 
-            <button onclick="checkEmail()" type="button" class="btn">Create Profile</button>
+            <button onclick="checkEmail()" type="submit" class="btn">Create Profile</button>
 
             <div class="link">
                 <p>Already have an account? <a href="login.html">Login</a></p>
@@ -52,37 +52,37 @@
                             "bio": null,
                             "pfp": null
                         }
-            fetch('userData.json')
-                .then(response => response.json())
-                .then(data => {
-                    var user = data.users.find(u => u.email === email);
-                    if (user) {
-                        alert('Email already exists');
-                    } else if (passwordInput.value.length < 4) {
-                        alert("Password must be at least 4 characters");
-                    } else {
-                        data.users.push(dataStructure);
-                        fetch('userData.json', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify(data),
-                        })
-                            .then((response) => {
-                                if (!response.ok) {
-                                    throw new Error('Failed to add user to userData.json');
-                                }
-                                alert('fail');
-                            })
-                            .catch((error) => {
-                                console.error('Error adding user to userData.json:', error);
-                                throw error;
-                            });
-                            window.location.href = "profileeditor.html"
-                    }
-                });
-        }
+            // fetch('userData.json')
+            //     .then(response => response.json())
+            //     .then(data => {
+            //         var user = data.users.find(u => u.email === email);
+            //         if (user) {
+            //             alert('Email already exists');
+            //         } else if (passwordInput.value.length < 4) {
+            //             alert("Password must be at least 4 characters");
+            //         } else {
+            //             data.users.push(dataStructure);
+            //             fetch('userData.json', {
+            //                 method: 'POST',
+            //                 headers: {
+            //                     'Content-Type': 'application/json',
+            //                 },
+            //                 body: JSON.stringify(data),
+            //             })
+            //                 .then((response) => {
+            //                     if (!response.ok) {
+            //                         throw new Error('Failed to add user to userData.json');
+            //                     }
+            //                     alert('fail');
+            //                 })
+            //                 .catch((error) => {
+            //                     console.error('Error adding user to userData.json:', error);
+            //                     throw error;
+            //                 });
+            //                 window.location.href = "profileeditor.html" // end case 
+        //             }
+        //         });
+         }
     </script>
         
 </body>
