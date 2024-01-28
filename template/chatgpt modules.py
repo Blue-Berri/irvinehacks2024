@@ -1,10 +1,11 @@
 from openai import OpenAI
 import json 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="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")
 data = {}
 you = {}
-with open("backend/userData.json", "r") as file:
+with open("template/userData.json", "r") as file:
     data = json.load(file)
+
 
 completion = client.chat.completions.create(
   model="gpt-3.5-turbo",
