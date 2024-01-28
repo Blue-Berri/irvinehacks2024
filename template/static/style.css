@@ -287,15 +287,23 @@ nav ul li a:hover::after {
     padding: 0px 30px 10px;
 }
 
-.choice-btn {
+.choice-btn-yes, .choice-btn-no {
     position: fixed;
     height: 50px;
     width: 50px;
     border-radius: 50%;
 }
 
-.choice-btn:hover {
+.choice-btn-yes:hover, .choice-btn-no:hover {
     cursor: pointer;
+}
+
+.choice-btn-no {
+    background-color: red;
+}
+
+.choice-btn-yes {
+    background-color: green;
 }
 
 .image {
