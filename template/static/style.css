@@ -317,11 +317,11 @@ nav ul li a:hover::after {
 
 /* ----- ----- ----- Profile Edit ----- ----- ----- */
 #profile-editor {
-    padding: 100px 10px;
+    height: 100%;
+    padding: 15% 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
     text-align: center; 
 }
 
