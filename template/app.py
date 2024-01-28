@@ -37,14 +37,14 @@ def register():
         # import pdb; pdb.set_trace()
         data = {
             "email": request.form['emailInput'],
-            "password": request.form['passwordInput']
-            # "name": request.form['Name'],
-            # "age": request.form['Age'],
-            # "gender": request.form['Gender'],
-            # "orientation": request.form['Orientation'],
-            # "major": request.form['Major'],
-            # "bio": request.form['Bio'],
-            # "pfp": request.form['Pfp']
+            "password": request.form['passwordInput'],
+            "name": None,
+            "age": None,
+            "gender": None,
+            "orientation": None,
+            "major": None,
+            "bio": None,
+            "pfp": None
         }
 
         try:
