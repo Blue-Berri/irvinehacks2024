@@ -125,12 +125,6 @@ div.image img {
     height: auto;
     background-color: white;
 }
-  
-div.desc {
-    padding: 10px 0px 0px;
-    text-align: center;
-    background-color: #ffdc92;
-}
 
 div.gallery {
     display: flex;
