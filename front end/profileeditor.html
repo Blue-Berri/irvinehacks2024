@@ -23,7 +23,34 @@
 </header>
 
 <body>
+    <div id="profile-editor">
+        <img src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg" id="profile-pic">
+        <label class="image-label" for="input-file">update image</label>
+        <input class="image-input" type="file" accept="image/png, image/jpg, image/jpeg" id="input-file">
+        
+        
+        <label for="name" id="label-name">Name</label>
+        <input type="text" id="name" placeholder="Name">
 
+        <label for="age" id="label-age">Age</label>
+        <input type="text" id="age" placeholder="Age">
+
+        <label for="major" id="label-major">Major</label>
+        <input type="text" id="major" placeholder="Major">
+
+        <label for="bio" id="label-bio">Bio</label>
+        <input type="text" id="bio" placeholder="Talk about yourself!">
+
+        <script>
+            let profilePic = document.getElementById("profile-pic");
+            let inputFile = document.getElementById("input-file");
+
+            inputFile.onchange = function(){
+                profilePic.src = URL.createObjectURL(inputFile.files[0])
+            }
+        </script>
+
+    </div>
 </body>
 
 </html>

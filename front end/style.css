@@ -5,18 +5,22 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+body { 
+    background-color: #fff0cf;
+}
+
 /* ----- ----- ----- Login Page ----- ----- -----*/
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: whitesmoke;
+    background: #fff0cf;
 }
 
 .login {
     width: 420px;
-    background: white;
+    background: #ffdc92;
     border: 2px solid black;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px black;
@@ -40,7 +44,7 @@ h1 {
 .input-box input {
     width: 100%;
     height: 100%;
-    background: transparent;
+    background: #fff0cf;
     border: none;
     outline: none;
     border: 2px solid black;
@@ -65,7 +69,7 @@ h1 {
 .login .btn {
     width: 100%;
     height: 45px;
-    background-color: transparent;
+    background-color: #fff0cf;
     border: none;
     outline: none;
     border-radius: 40px;
@@ -100,7 +104,7 @@ h1 {
 /* ----- ----- ----- Register Page ----- ----- ----- */
 .register {
     width: 420px;
-    background: white;
+    background: #ffdc92;
     border: 2px solid black;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px black;
@@ -119,7 +123,7 @@ h1 {
 .register .btn {
     width: 100%;
     height: 45px;
-    background-color: transparent;
+    background-color: #fff0cf;
     border: none;
     outline: none;
     border-radius: 40px;
@@ -147,18 +151,19 @@ header {
     width: 100%;
     padding: 20px 5%;
     justify-content: space-between;
-    background-color: black;
-    color: white;
+    background-color: #ffdc92;
 }
 
 #home {
+    background-color: #ffdc92;
     float: left;
     margin: 10px 15px;
 }
 
 #home a {
     font-size: 20px;
-    color: white;
+    color: black;
+    background-color: transparent;
     text-decoration: none;
     position: relative;
 }
@@ -167,7 +172,7 @@ header {
     content: '';
     width: 0%;
     height: 3px;
-    background: white;
+    background: black;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -182,6 +187,7 @@ header {
     float: right;
 }
 #nav ul {
+    background-color: #ffdc92;
     text-align: center;
     list-style: none;
 }
@@ -193,7 +199,8 @@ header {
 
 nav ul li a {
     font-size: 20px;
-    color: white;
+    color: black;
+    background-color: #ffdc92;
     text-decoration: none;
     position: relative;
 }
@@ -202,7 +209,7 @@ nav ul li a::after {
     content: '';
     width: 0%;
     height: 3px;
-    background: white;
+    background: black;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -244,16 +251,98 @@ nav ul li a:hover::after {
 }
 
 .profile-image img {
-    height: 175px;
-    border: 2px black;
+    border: 3px solid black;
+    height: 250px;
     border-radius: 50%;
 }
 
+.user-name {
+    display: flex;
+    padding: 0px 30px 10px;
+}
+
+.user-major {
+    display: flex;
+    padding: 0px 30px 10px;
+}
+
+.bio {
+    display: flex;
+    padding: 0px 30px 10px;
+}
+
 .choice-btn {
+    position: fixed;
     height: 50px;
     width: 50px;
     border-radius: 50%;
 }
+
+.choice-btn:hover {
+    cursor: pointer;
+}
+
+.image {
+    display: fixed;
+    margin: 5px;
+    border: 1px solid black;
+    float: left;
+    width: 300px;
+}
+  
+.image img {
+    width: 190px;
+    height: auto;
+}
+  
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.gallery {
+    padding: 165px;
+    display: fixed;
+    justify-content: center;
+}
+
+/* ----- ----- ----- Profile Edit ----- ----- ----- */
+#profile-editor {
+    padding-top: 100px;
+}
+
+#profile-editor img {
+    width: 200px;
+    border-radius: 50%;
+    margin: 10px 30px;
+}
+
+.image-label {
+    display: block;
+    text-align: center;
+    width: 140px;
+    background-color: #ffdc92;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15%;
+    cursor: pointer;
+}
+
+.image-input {
+    display: none;
+}
+
+label {
+    display: flex;
+    padding: 5px 10px 0px;
+}
+
+input {
+    display: flex;
+    margin: 5px 10px ;
+    padding: 5px;
+}
+
 /* ----- ----- ----- Matches ----- ----- ----- */
 .matches {
     padding-top: 100px;
