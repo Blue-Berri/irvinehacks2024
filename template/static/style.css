@@ -155,6 +155,7 @@ header {
     padding: 20px 5%;
     justify-content: space-between;
     background-color: #ffdc92;
+    border: 3px solid #000000;
 }
 
 #home {
@@ -288,16 +289,23 @@ nav ul li a:hover::after {
 
 .image {
     margin: 0 10px;
+    border: 2px solid #000000;
+    padding: 10px;
+    width: 270px;
+    background-color: #ffdc92;
+    border-radius: 2%;
 }
   
 .image img {
-    width: 200px;
+    width: 240px;
     height: auto;
+    background-color: white;
 }
   
 .desc {
     padding: 10px 50px;
     text-align: center;
+    background-color: #ffdc92;
 }
 
 .gallery {
