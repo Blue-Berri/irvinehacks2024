@@ -73,7 +73,25 @@ def login():
 
 @app.route("/profile")
 def profile():
-    return render_template("profile.html")
+    data = json.loads(open("template/userData.json", 'r').read())
+    name = data.get("current").get("name")
+    age = data.get("current").get("age")
+    bio = data.get("current").get("bio")
+    major = data.get("current").get("major")
+    pfp = data.get("current").get("pfp")
+    if data.get("current").get("pic1") == None:
+        pic1 = "https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png"
+    else:
+        pic1 = data.get("current").get("pic1")
+    if data.get("current").get("pic2") == None:
+        pic2 = "https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png"
+    else:
+        pic2 = data.get("current").get("pic2")
+    if data.get("current").get("pic3") == None:
+        pic3 = "https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png"
+    else:
+        pic3 = data.get("current").get("pic3")
+    return render_template("profile.html", name=name, age=age, bio=bio, major=major, pfp=pfp, pic1=pic1, pic2=pic2, pic3=pic3)
 
 @app.route("/messages")
 def messages():
