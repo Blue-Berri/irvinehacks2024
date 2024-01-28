@@ -1,4 +1,15 @@
 {
+  "current": {
+      "email": "pog@bruh",
+      "password": "joee",
+        "name": null, 
+        "age": null, 
+        "gender": null,
+        "orientation": null,
+        "major": null, 
+        "bio": null, 
+        "pfp": null
+    },
   "users": [
       {
           "email": "r@uci",
