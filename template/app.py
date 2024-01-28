@@ -65,6 +65,22 @@ def register():
 
     return render_template("register.html")
 
+# @app.route("/profileeditor", methods=["POST", "GET"])
+# def profileeditor():
+#     if request.method == "POST":
+#         # import pdb; pdb.set_trace()
+#         data = {
+#             "email": request.form['emailInput'],
+#             "password": request.form['passwordInput'],
+#             "name": None,
+#             "age": None,
+#             "gender": None,
+#             "orientation": None,
+#             "major": None,
+#             "bio": None,
+#             "pfp": None
+#         }
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5501)
