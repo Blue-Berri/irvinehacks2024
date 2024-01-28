@@ -111,7 +111,7 @@ div.image {
     margin: 5px;
     border: 2px solid #000000;
     float: left;
-    width: 300px;
+    width: 200px;
     background-color: #ffdc92;
     border-radius: 2%;
 }
@@ -124,12 +124,6 @@ div.image img {
     width: 100%;
     height: auto;
     background-color: white;
-}
-  
-div.desc {
-    padding: 15px;
-    text-align: center;
-    background-color: #ffdc92;
 }
 
 div.gallery {

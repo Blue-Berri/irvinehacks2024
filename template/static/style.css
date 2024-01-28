@@ -320,12 +320,6 @@ nav ul li a:hover::after {
     height: auto;
     background-color: white;
 }
-  
-.desc {
-    padding: 10px 50px;
-    text-align: center;
-    background-color: #ffdc92;
-}
 
 .gallery {
     height: 100%;
