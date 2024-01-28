@@ -111,7 +111,7 @@ div.image {
     margin: 5px;
     border: 2px solid #000000;
     float: left;
-    width: 300px;
+    width: 200px;
     background-color: #ffdc92;
     border-radius: 2%;
 }
@@ -127,7 +127,7 @@ div.image img {
 }
   
 div.desc {
-    padding: 15px;
+    padding: 10px 0px 0px;
     text-align: center;
     background-color: #ffdc92;
 }
