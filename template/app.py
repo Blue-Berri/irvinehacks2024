@@ -4,7 +4,8 @@ from pathlib import Path
 
 app = Flask(__name__, template_folder=Path(__file__).resolve().parent)
 
-@app.route("/")
+
+@app.route("/home")
 def home():
     # call db
     # databasedata
