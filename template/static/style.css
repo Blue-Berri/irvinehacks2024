@@ -234,14 +234,12 @@ nav ul li a:hover::after {
 }
   
 #profiles .left,#profiles .right {
-    border: 2px solid black;
     padding: 15px;
     padding-top: 400px;
     width: 10%;
 }
   
 #profiles .middle {
-    border: 2px solid black;
     text-align: center;
     padding: 15px;
     width: 80%;
@@ -319,11 +317,11 @@ nav ul li a:hover::after {
 
 /* ----- ----- ----- Profile Edit ----- ----- ----- */
 #profile-editor {
-    padding: 100px 10px;
+    height: 100%;
+    padding: 15% 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
     text-align: center; 
 }
 
