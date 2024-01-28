@@ -328,9 +328,14 @@ nav ul li a:hover::after {
 }
 
 /* ----- ----- ----- Profile Edit ----- ----- ----- */
+.profile-editor {
+    height: 100%;
+    overflow-y: hidden;
+}
+
 #profile-editor {
     height: 100%;
-    padding: 15% 5%;
+    padding: 8% 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -349,9 +354,13 @@ nav ul li a:hover::after {
     justify-content: center;
 }
 
-#profile-editor img {
+#profile-editor .left img {
     border-radius: 50%;
-    width: 200px;
+    width: 100px;
+}
+
+#profile-editor .right img {
+    width: 110px;
 }
 
 #profile-editor .image-input {
@@ -360,7 +369,7 @@ nav ul li a:hover::after {
 
 #profile-editor label {
     display: flex;
-    padding-top: 15px;
+    padding-top: 9px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -380,14 +389,18 @@ nav ul li a:hover::after {
 
 .image-label {
     display: block;
-    width: 140px;
+    width: 20%;
+    height: 30px;
     background-color: #ffdc92;
+    border: none;
+    outline: none;
+    border-radius: 40px;
     box-shadow: 0 0 5px #ffdc92;
-    font-weight: 600;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 15%;
     cursor: pointer;
+    font-size: 10px;
+    color: black;
+    font-weight: 600;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -403,15 +416,15 @@ nav ul li a:hover::after {
 }
 
 #profile-editor .btn {
-    width: 25%;
-    height: 45px;
+    width: 10%;
+    height: 40px;
     background-color: #ffdc92;
     border: none;
     outline: none;
     border-radius: 40px;
     box-shadow: 0 0 5px #ffdc92;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
     color: black;
     font-weight: 600;
     margin-top: 20px;
