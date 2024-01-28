@@ -9,6 +9,12 @@ body {
     background-color: #fff0cf;
 }
 
+h1 {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
 /* ----- ----- ----- Login Page ----- ----- -----*/
 .container {
     display: flex;
@@ -27,12 +33,6 @@ body {
     color: black;
     border-radius: 10px;
     padding: 30px 40px;
-}
-
-h1 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 20px;
 }
 
 .login .input-box {
@@ -239,6 +239,7 @@ nav ul li a:hover::after {
 }
   
 .middle {
+    text-align: center;
     padding: 15px;
     width: 80%;
 }
@@ -286,28 +287,24 @@ nav ul li a:hover::after {
 }
 
 .image {
-    display: fixed;
-    margin: 5px;
-    border: 1px solid black;
-    float: left;
-    width: 200px;
+    margin: 0 10px;
 }
   
 .image img {
-    width: 190px;
+    width: 200px;
     height: auto;
 }
   
 .desc {
-    padding: 15px;
+    padding: 10px 50px;
     text-align: center;
 }
 
 .gallery {
-    padding: 165px;
-    display: flex;
+    padding: 200px 80px;
+    display: inline-flex;
     justify-content: center;
-    position: fixed;
+    align-items: center;
 }
 
 /* ----- ----- ----- Profile Edit ----- ----- ----- */
