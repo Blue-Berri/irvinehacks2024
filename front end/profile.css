@@ -1,5 +1,8 @@
 * {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
     background-color: #fff0cf;
 }
 
@@ -52,8 +55,7 @@
     border-radius: 50%;
 }
 
-.profile-user-settings,
-.profile-stats,
+.profile-user-settings, .profile-major,
 .profile-bio {
     float: left;
     width: calc(66.666% - 2rem);
@@ -72,7 +74,7 @@
 .profile-edit-btn {
     font-size: 1.4rem;
     line-height: 1.8;
-    border: 0.1rem solid #dbdbdb;
+    border: 0.2rem solid #000000;
     border-radius: 0.3rem;
     padding: 0 2.4rem;
     margin-left: 2rem;
@@ -87,30 +89,19 @@
     margin-left: 1rem;
 }
 
-.profile-stats {
-    margin-top: 2.3rem;
-}
-
-.profile-stats li {
-    display: inline-block;
-    font-size: 1.6rem;
-    line-height: 1.5;
-    margin-right: 4rem;
-    cursor: pointer;
-}
-
-.profile-stats li:last-of-type {
-    margin-right: 0;
-}
-
 .profile-bio {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.5;
-    margin-top: 2.3rem;
+    margin-top: 0rem;
 }
 
-.profile-real-name,
+.profile-major {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 0.5;
+}
+
 .profile-edit-btn {
     font-weight: 600;
 }
@@ -118,9 +109,11 @@
 div.image {
     padding: 15px;
     margin: 5px;
-    border: 1px solid #ccc;
+    border: 2px solid #000000;
     float: left;
     width: 300px;
+    background-color: #ffdc92;
+    border-radius: 2%;
 }
   
 div.image:hover {
@@ -130,11 +123,13 @@ div.image:hover {
 div.image img {
     width: 100%;
     height: auto;
+    background-color: white;
 }
   
 div.desc {
     padding: 15px;
     text-align: center;
+    background-color: #ffdc92;
 }
 
 div.gallery {
@@ -150,6 +145,7 @@ header {
     padding: 10px 5%;
     justify-content: space-between;
     background-color: #ffdc92;
+    border: 3px solid #000000;
 }
 
 #home {
