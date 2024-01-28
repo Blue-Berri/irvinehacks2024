@@ -52,7 +52,7 @@
                             "bio": null,
                             "pfp": null
                         }
-            fetch('../backend/userData.json')
+            fetch('userData.json')
                 .then(response => response.json())
                 .then(data => {
                     var user = data.users.find(u => u.email === email);
@@ -62,7 +62,7 @@
                         alert("Password must be at least 4 characters");
                     } else {
                         data.users.push(dataStructure);
-                        fetch('../backend/userData.json', {
+                        fetch('userData.json', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
