@@ -82,8 +82,13 @@
                 
             </div>
             
-            <button onclick="" type="button" class="btn">Save</button>
+            <button onclick="send_profile()" type="button" class="btn">Save</button>
         </form>
+        <script>
+            function send_profile() {
+                window.location.href = "profile";
+            }
+        </script>
 
         <script>
             let profilePic = document.getElementById("profile-pic");
