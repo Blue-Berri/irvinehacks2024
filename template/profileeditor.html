@@ -32,13 +32,13 @@
                 <input class="image-input" type="file" name="pfpInput" accept="image/png, image/jpg, image/jpeg" id="input-file">
                 
                 <label for="name" id="label-name">Name</label>
-                <input type="text" id="name" name="nameInput" placeholder="Name">
+                <input type="text" id="nameInput" name="nameInput" placeholder="Name">
 
                 <label for="age" id="label-age">Age</label>
-                <input type="text" id="age" name="ageInput" placeholder="Age">
+                <input type="text" id="ageInput" name="ageInput" placeholder="Age">
 
                 <label for="major" id="label-major">Major</label>
-                <input type="text" id="major" name="majorInput" placeholder="Major">
+                <input type="text" id="majorInput" name="majorInput" placeholder="Major">
 
                 <label for="gender" id="label-gender">Gender</label>
                 <select name="genderInput" id="gender">
@@ -64,7 +64,7 @@
                 </select>
 
                 <label for="bio" id="label-bio">Bio</label>
-                <input type="text" id="bio" name="bioInput" placeholder="Talk about yourself!">
+                <input type="text" id="bioInput" name="bioInput" placeholder="Talk about yourself!">
             </div>
 
             <div class="column right">
@@ -82,8 +82,13 @@
                 
             </div>
             
-            <button onclick="" type="button" class="btn">Save</button>
+            <button onclick="send_profile()" type="button" class="btn">Save</button>
         </form>
+        <script>
+            function send_profile() {
+                window.location.href = "profile";
+            }
+        </script>
 
         <script>
             let profilePic = document.getElementById("profile-pic");
