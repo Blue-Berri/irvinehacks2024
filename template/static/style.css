@@ -226,7 +226,8 @@ nav ul li a:hover::after {
 
 /* ----- ----- ----- Home ----- ----- ----- */
 #profiles {
-    padding-top: 100px;
+    height: 100%;
+    padding-top: 10%;
 }
 
 #profiles .column {
@@ -235,12 +236,16 @@ nav ul li a:hover::after {
   
 #profiles .left,#profiles .right {
     padding: 15px;
-    padding-top: 400px;
+    height: 100%;
+    padding-top: 20%;
     width: 10%;
 }
   
 #profiles .middle {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    justify-content: center;
     padding: 15px;
     width: 80%;
 }
@@ -256,9 +261,14 @@ nav ul li a:hover::after {
 }
 
 .profile-image img {
+    float: left;
     border: 3px solid black;
-    height: 250px;
+    height: 125px;
     border-radius: 50%;
+}
+
+.profile-image h1, h2, p {
+    float: left;
 }
 
 .user-name {
@@ -288,16 +298,16 @@ nav ul li a:hover::after {
 }
 
 .image {
-    margin: 0 10px;
+    width: 100%;
+    margin: 0 5%;
     border: 2px solid #000000;
     padding: 10px;
-    width: 270px;
     background-color: #ffdc92;
     border-radius: 2%;
 }
   
 .image img {
-    width: 240px;
+    width: 170px;
     height: auto;
     background-color: white;
 }
@@ -309,7 +319,8 @@ nav ul li a:hover::after {
 }
 
 .gallery {
-    padding: 200px 80px;
+    height: 100%;
+    padding: 2% 5%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
