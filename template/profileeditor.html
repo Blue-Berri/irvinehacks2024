@@ -9,7 +9,7 @@
 </head>
 
 <header>
-    <div id="home"><a href="home">Home</a></div>
+    <div id="home"><a href="home"><img class="logo" src="Connected(2).png"></a></div>
 
     <div id="nav">
         <nav>
@@ -32,13 +32,13 @@
                 <input class="image-input" type="file" name="pfpInput" accept="image/png, image/jpg, image/jpeg" id="input-file">
                 
                 <label for="name" id="label-name">Name</label>
-                <input type="text" id="nameInput" name="nameInput" placeholder="Name">
+                <input type="text" id="nameInput" name="nameInput" placeholder="{{ name }}">
 
                 <label for="age" id="label-age">Age</label>
-                <input type="text" id="ageInput" name="ageInput" placeholder="Age">
+                <input type="text" id="ageInput" name="ageInput" placeholder="{{ age }}">
 
                 <label for="major" id="label-major">Major</label>
-                <input type="text" id="majorInput" name="majorInput" placeholder="Major">
+                <input type="text" id="majorInput" name="majorInput" placeholder="{{ major }}">
 
                 <label for="gender" id="label-gender">Gender</label>
                 <select name="genderInput" id="gender">
@@ -64,7 +64,7 @@
                 </select>
 
                 <label for="bio" id="label-bio">Bio</label>
-                <input type="text" id="bioInput" name="bioInput" placeholder="Talk about yourself!">
+                <input type="text" id="bioInput" name="bioInput" placeholder="{{ bio }}">
             </div>
 
             <div class="column right">
