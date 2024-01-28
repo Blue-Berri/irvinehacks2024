@@ -37,20 +37,10 @@
         function checkLogin() {
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
+            window.location.href = "home";
 // how to make post request with fetch to flask
-            fetch("userData.json")
-                .then(response => response.json())
-                .then(data => {
-                    var user = data.users.find(u => u.email === email && u.password === password);
-                    if (password.length == 0 || password.length == 0){
-                        alert("Blank field detected")
-                    } else if (user) {
-                        window.location.href = "home";
-                    } else {
-                        alert("Invalid email or password. Please try again.");
-                    }
-                })
-                .catch(error => console.log(error));
+
+        
         }
     </script>
 </body>
