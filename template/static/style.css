@@ -372,6 +372,8 @@ nav ul li a:hover::after {
     display: block;
     width: 140px;
     background-color: #ffdc92;
+    box-shadow: 0 0 5px #ffdc92;
+    font-weight: 600;
     padding: 10px;
     margin: 10px;
     border-radius: 15%;
@@ -380,9 +382,34 @@ nav ul li a:hover::after {
     margin-right: auto;
 }
 
+.image-label:hover {
+    box-shadow: 0 0 10px black;
+    transition: 0.2s;
+}
+
 #bio {
     height: 50px;
     width: 200px;
+}
+
+#profile-editor .btn {
+    width: 25%;
+    height: 45px;
+    background-color: #ffdc92;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 5px #ffdc92;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+#profile-editor .btn:hover {
+    box-shadow: 0 0 10px black;
+    transition: 0.2s;
 }
 
 /* ----- ----- ----- Matches ----- ----- ----- */
